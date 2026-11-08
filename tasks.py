@@ -30,5 +30,9 @@ def create_task(title, description):
     return new_task
 
 
+def get_pending_tasks():
+    return [task for task in tasks if task["status"] == "PENDING"]
+
+
 if __name__ == "__main__":
     print(get_tasks())
